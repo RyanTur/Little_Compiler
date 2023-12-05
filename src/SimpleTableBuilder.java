@@ -234,7 +234,7 @@ public class SimpleTableBuilder extends LittleBaseListener {
             tinyCode.append("move ").append("r").append(register).append(" ").append(ctx.getText().split(":=")[0]).append("\n");
             register++;
 
-        }else{
+        } else {
             System.out.println(";STORE"  + type.charAt(0) + " " + ctx.getText().split(":=")[1] + " $T" + register);
             System.out.println(";STORE"  + type.charAt(0) + " $T" + register + " " + ctx.getText().split(":=")[0]);
             tinyCode.append("move ").append(ctx.getText().split(":=")[1]).append(" ").append("r").append(register-1).append("\n");
