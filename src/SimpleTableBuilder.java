@@ -251,44 +251,8 @@ public class SimpleTableBuilder extends LittleBaseListener {
 
         if (errorDetected){
             System.out.println("DECLARATION ERROR " + errorVarNames.get(0));
-            return;
         }
 
-//        for (int i = 0;i < symbolTableList.size();i++) {
-//
-//            System.out.println("Symbol table " + symbolTableList.get(i).getScope());
-//
-//            SymbolEntry<?> current = symbolTableList.get(i).getHead();
-//
-//            Stack<SymbolEntry<?>> stack = new Stack<>();
-//
-//            while (current != null) {
-//
-//                stack.push(current);
-//
-//                current = current.next;
-//            }
-//
-//            while(!stack.isEmpty()){
-//
-//                current = stack.pop();
-//
-//                System.out.print("name " + current.name + " type " + current.type);
-//
-//                if (current.value != null) {
-//                    System.out.println(" value " + current.value);
-//                }else{
-//                    System.out.println();
-//                }
-//
-//            }
-//
-//            if (i!=symbolTableList.size()-1){
-//                System.out.println();
-//            }
-//
-//
-//        }
     }
 
     
