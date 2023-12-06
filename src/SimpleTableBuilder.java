@@ -32,7 +32,7 @@ public class SimpleTableBuilder extends LittleBaseListener {
 
     @Override public void exitProgram(LittleParser.ProgramContext ctx) {
         System.out.println(";RET\n;tiny code");
-        tinyCode.append("sys halt\n");
+        //tinyCode.append("sys halt\n");
         scopeStack.pop();
     }
 
@@ -174,7 +174,7 @@ public class SimpleTableBuilder extends LittleBaseListener {
 
             for (SymbolTable table : symbolTableList) {
                 if (table.lookup(id) != null) {
-                    char type = table.lookup(id).type.charAt(0);
+                    char type = table.lookup(id).type.toLowerCase().charAt(0);
                     System.out.println(";READ" + type + " " + id);
                     tinyCode.append("sys").append(" ").append("read").append(type).append(" ").append(id).append("\n");
                     break;
